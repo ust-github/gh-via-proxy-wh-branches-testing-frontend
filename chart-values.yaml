@@ -1,0 +1,14 @@
+image:
+  repository: artifactory.dagility.com/docker/gh-via-proxy-wh-branches-testing-frontend
+  tag: latest
+  pullPolicy: Always
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+  hosts:
+  - host: gh-via-proxy-wh-branches-testing-frontend-habitat-development.dagility.com
+    paths:
+    - /
+serviceAccount:
+  create: false
